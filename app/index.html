@@ -9,7 +9,7 @@
       font-family: 'Helvetica Neue', Helvetica, sans-serif;
     }
   </style>
-  <script src="bower_components/webcomponentsjs/webcomponentsjs-lite.min.js" charset="utf-8"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
   <link rel="import" href="bower_components/vaadin-grid/vaadin-grid.html">
 </head>
 
@@ -18,59 +18,114 @@
   <vaadin-grid>
     <table>
       <colgroup>
-        <col/>
-        <col/>
-        <col/>
-        <col/>
+        <col name="user.name.first" />
+        <col name="user.name.last" />
+        <col name="user.email" />
+        <col name="user.phone" />
       </colgroup>
-      <thead>
-        <tr>
-          <td>
-            First name
-          </td>
-          <td>
-            Last name
-          </td>
-          <td>
-            Email
-          </td>
-          <td>
-            Phone
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            Marcus
-          </td>
-          <td>
-            Hellberg
-          </td>
-          <td>
-            marcus@fakemail.com
-          </td>
-          <td>
-            1 (844) 4-VAADIN
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Joonas
-          </td>
-          <td>
-            Lehtinen
-          </td>
-          <td>
-            joonas@fakemail.com
-          </td>
-          <td>
-            1 (844) 4-VAADIN
-          </td>
-        </tr>
-      </tbody>
     </table>
   </vaadin-grid>
+
+  <script>
+    window.addEventListener('WebComponentsReady', function() {
+      var grid = document.querySelector('vaadin-grid');
+
+      var signups = [{
+        user: {
+          name: {
+            first: 'josephine',
+            last: 'bradley'
+          },
+          email: 'josephine.bradley@example.com',
+          phone: '(603)-836-7013'
+        }
+      }, {
+        user: {
+          name: {
+            first: 'lois',
+            last: 'dixon'
+          },
+          email: 'lois.dixon@example.com',
+          phone: '(011)-530-6547'
+        }
+      }, {
+        user: {
+          name: {
+            first: 'andy',
+            last: 'crawford'
+          },
+          email: 'andy.crawford@example.com',
+          phone: '(067)-431-8686'
+        }
+      }, {
+        user: {
+          name: {
+            first: 'erik',
+            last: 'ortiz'
+          },
+          email: 'erik.ortiz@example.com',
+          phone: '(180)-687-7569'
+        }
+      }, {
+        user: {
+          name: {
+            first: 'brooklyn',
+            last: 'brown'
+          },
+          email: 'brooklyn.brown@example.com',
+          phone: '(490)-068-3349'
+        }
+      }, {
+        user: {
+          name: {
+            first: 'clifton',
+            last: 'mcdonalid'
+          },
+          email: 'clifton.mcdonalid@example.com',
+          phone: '(385)-989-2806'
+        }
+      }, {
+        user: {
+          name: {
+            first: 'mabel',
+            last: 'mitchell'
+          },
+          email: 'mabel.mitchell@example.com',
+          phone: '(554)-627-7735'
+        }
+      }, {
+        user: {
+          name: {
+            first: 'carrie',
+            last: 'wheeler'
+          },
+          email: 'carrie.wheeler@example.com',
+          phone: '(924)-817-4481'
+        }
+      }, {
+        user: {
+          name: {
+            first: 'harry',
+            last: 'jensen'
+          },
+          email: 'harry.jensen@example.com',
+          phone: '(890)-459-9412'
+        }
+      }, {
+        user: {
+          name: {
+            first: 'beth',
+            last: 'hall'
+          },
+          email: 'beth.hall@example.com',
+          phone: '(817)-639-9011'
+        }
+      }];
+
+      grid.items = signups;
+
+    });
+  </script>
 </body>
 
 </html>
