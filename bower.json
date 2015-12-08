@@ -1,5 +1,5 @@
 {
-  "name": "elements-page",
+  "name": "datasources",
   "description": "",
   "main": "index.js",
   "authors": [
@@ -20,6 +20,8 @@
     "paper-button": "PolymerElements/paper-button#~1.0.10",
     "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.2.2",
     "waypoints": "~4.0.0",
-    "vaadin-elements": "0.3.0-beta13"
+    "vaadin-elements": "0.3.0-beta13",
+    "iron-elements": "PolymerElements/iron-elements#^1.0.0",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.1"
   }
 }
