@@ -29,9 +29,21 @@
   <script>
     window.addEventListener('WebComponentsReady', function() {
       var grid = document.querySelector('vaadin-grid');
+      var restApi = 'http://api.randomuser.me/?results=100';
 
-      grid.items = signups;
-
+      grid.items = function(params, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              var json = JSON.parse(xhr.responseText);
+              callback(json.results);
+            }
+          }
+        };
+        xhr.open('GET', restApi, true);
+        xhr.send();
+      };
     });
   </script>
 </body>
